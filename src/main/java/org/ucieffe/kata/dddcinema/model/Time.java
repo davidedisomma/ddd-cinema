@@ -1,12 +1,12 @@
 package org.ucieffe.kata.dddcinema.model;
 
-import java.time.LocalTime;
-
 public class Time {
 
-    public final LocalTime time;
+    public final int hours;
+    public final int minutes;
 
-    public Time(LocalTime time) {
-        this.time = time;
+    public Time(int hours, int minutes) {
+        this.hours = hours;
+        this.minutes = minutes;
     }
 }

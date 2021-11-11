@@ -6,6 +6,7 @@ import java.util.UUID;
 
 public class Screening {
 
+    public static final int MINUTES_BEFORE_SCREENING_BOOKING_EXPIRATION = 15;
     public final UUID uuid;
     public final Movie movie;
     public final DateTime schedulingTime;
@@ -22,5 +23,9 @@ public class Screening {
         this.room = room;
         this.availableSeats = availableSeats;
         this.reservations = reservations;
+    }
+
+    public DateTime getExpirationBookingDateTime() {
+        return schedulingTime.minus(MINUTES_BEFORE_SCREENING_BOOKING_EXPIRATION);
     }
 }

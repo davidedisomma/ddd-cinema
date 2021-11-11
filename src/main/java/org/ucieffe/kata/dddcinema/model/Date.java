@@ -1,11 +1,13 @@
 package org.ucieffe.kata.dddcinema.model;
 
-import java.time.LocalDate;
-
 public class Date {
-    public final LocalDate date;
+    public final int year;
+    public final int month;
+    public final int dayOfTheMonth;
 
-    public Date(LocalDate date) {
-        this.date = date;
+    public Date(int year, int month, int dayOfTheMonth) {
+        this.year = year;
+        this.month = month;
+        this.dayOfTheMonth = dayOfTheMonth;
     }
 }
